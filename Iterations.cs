@@ -105,11 +105,12 @@ namespace DotnetIteration
         // 
         public static IEnumerable<string> BestMovieOfTheYear(List<Movie> movies, int yearToMatch)
         {
-            //var movieOfTheYear = movies.Where(movie => movie.Score >= 90).Select(movie => movie.Year);
-            // foreach (movie in movieOfTheYear)
-            //  {
-            //     Console.WriteLine(movie.Name);
-            //  }
+            // var movieOfTheYear = movies.Where(movie => movie.Score >= 90).Select(movie => movie.Year);
+            // foreach (var movie in movieOfTheYear)
+            // {
+            //     Console.WriteLine(movie);
+            // }
+
             throw new System.NotImplementedException();
         }
 
@@ -133,9 +134,9 @@ namespace DotnetIteration
         // 
         public static string FindTheNeedle(List<string> sentences)
         {
-            var firstNeedle = sentences.First(sentence => sentence == "needle");
-            return firstNeedle;
-            //throw new System.NotImplementedException();
+            var needle = sentences.FirstOrDefault(sentence => sentence == "'needle'");
+            return needle;
+            // throw new System.NotImplementedException();
         }
 
 
@@ -157,7 +158,10 @@ namespace DotnetIteration
         // 
         public static bool SomeoneToLove(List<string> words)
         {
-            throw new System.NotImplementedException();
+            var love = words.Any(word => word.Length == 4);
+            return love;
+
+            // throw new System.NotImplementedException();
         }
     }
 }
