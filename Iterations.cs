@@ -32,7 +32,9 @@ namespace DotnetIteration
         //
         public static IEnumerable<string> Yelling(List<string> words)
         {
-            throw new System.NotImplementedException();
+            // throw new System.NotImplementedException();
+            var newWords = words.Select(word => word.ToUpper());
+            return newWords;
         }
 
 
@@ -43,7 +45,9 @@ namespace DotnetIteration
         // 
         public static IEnumerable<int> Double(List<int> numbers)
         {
-            throw new System.NotImplementedException();
+            //  throw new System.NotImplementedException();
+            var newNumbers = numbers.Select(numbers => numbers * 2);
+            return newNumbers;
         }
 
 
@@ -55,7 +59,9 @@ namespace DotnetIteration
         // 
         public static IEnumerable<string> StringyIndexes(List<string> words)
         {
-            throw new System.NotImplementedException();
+            // throw new System.NotImplementedException();
+            var newWords = words.Select((word, index) => $"{word} is at index {index}");
+            return newWords;
         }
 
 
@@ -65,7 +71,9 @@ namespace DotnetIteration
         // 
         public static IEnumerable<int> OnlyTheEvenSurvive(List<int> numbers)
         {
-            throw new System.NotImplementedException();
+            //throw new System.NotImplementedException();
+            var evensList = numbers.Where(numbers => numbers % 2 == 0);
+            return evensList;
         }
 
 
@@ -76,7 +84,9 @@ namespace DotnetIteration
         // 
         public static IEnumerable<int> OnlyTheEvenIndexedSurvive(List<int> numbers)
         {
-            throw new System.NotImplementedException();
+            // throw new System.NotImplementedException();
+            var evenIndexList = numbers.Where((numbers, index) => index % 2 == 0);
+            return evenIndexList;
         }
 
 
@@ -95,6 +105,11 @@ namespace DotnetIteration
         // 
         public static IEnumerable<string> BestMovieOfTheYear(List<Movie> movies, int yearToMatch)
         {
+            //var movieOfTheYear = movies.Where(movie => movie.Score >= 90).Select(movie => movie.Year);
+            // foreach (movie in movieOfTheYear)
+            //  {
+            //     Console.WriteLine(movie.Name);
+            //  }
             throw new System.NotImplementedException();
         }
 
