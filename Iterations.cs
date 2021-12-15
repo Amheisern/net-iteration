@@ -33,8 +33,8 @@ namespace DotnetIteration
         public static IEnumerable<string> Yelling(List<string> words)
         {
             // throw new System.NotImplementedException();
-            var newWords = words.Select(word => word.ToUpper());
-            return newWords;
+            return words.Select(word => word.ToUpper());
+            //return newWords;
         }
 
 
@@ -46,8 +46,9 @@ namespace DotnetIteration
         public static IEnumerable<int> Double(List<int> numbers)
         {
             //  throw new System.NotImplementedException();
-            var newNumbers = numbers.Select(numbers => numbers * 2);
-            return newNumbers;
+            //var newNumbers = 
+            return numbers.Select(numbers => numbers * 2);
+            //return newNumbers;
         }
 
 
