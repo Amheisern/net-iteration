@@ -105,13 +105,12 @@ namespace DotnetIteration
         // 
         public static IEnumerable<string> BestMovieOfTheYear(List<Movie> movies, int yearToMatch)
         {
-            // var movieOfTheYear = movies.Where(movie => movie.Score >= 90).Select(movie => movie.Year);
-            // foreach (var movie in movieOfTheYear)
-            // {
-            //     Console.WriteLine(movie);
-            // }
+            var movieOfTheYear = movies
+                .Where(movie => movie.Score > 90 && movie.Year == yearToMatch)
+                .Select(movie => movie.Name);
+            return movieOfTheYear;
 
-            throw new System.NotImplementedException();
+            //throw new System.NotImplementedException();
         }
 
 
@@ -123,7 +122,7 @@ namespace DotnetIteration
         {
             var isTheListOdd = numbers.All(number => number % 2 != 0);
             return isTheListOdd;
-            //throw new System.NotImplementedException();
+
         }
 
 
@@ -134,9 +133,13 @@ namespace DotnetIteration
         // 
         public static string FindTheNeedle(List<string> sentences)
         {
-            var needle = sentences.FirstOrDefault(sentence => sentence == "'needle'");
-            return needle;
-            // throw new System.NotImplementedException();
+            var haystack = sentences.Find(sentence => sentence.Contains("needle"));
+            return haystack;
+            //  foreach (var needle in haystack)
+            //  {
+            //      Console.WriteLine(haystack);
+            //  }
+            throw new System.NotImplementedException();
         }
 
 
@@ -147,6 +150,8 @@ namespace DotnetIteration
         // 
         public static int FindTheNeedleIndex(List<string> sentences)
         {
+            var haystack = sentences.FindIndex(sentence => sentence.Contains("needle"));
+            return haystack;
             throw new System.NotImplementedException();
         }
 
