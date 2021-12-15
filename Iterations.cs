@@ -121,8 +121,8 @@ namespace DotnetIteration
         // 
         public static bool EveryoneIsOdd(List<int> numbers)
         {
-            var isTheListOdd = numbers.All(number => number % 2 != 0);
-            return isTheListOdd;
+            return numbers.All(number => number % 2 != 0);
+
 
         }
 
@@ -134,13 +134,12 @@ namespace DotnetIteration
         // 
         public static string FindTheNeedle(List<string> sentences)
         {
-            var haystack = sentences.Find(sentence => sentence.Contains("needle"));
-            return haystack;
+            return sentences.Find(sentence => sentence.Contains("needle"));
             //  foreach (var needle in haystack)
             //  {
             //      Console.WriteLine(haystack);
             //  }
-            throw new System.NotImplementedException();
+            // throw new System.NotImplementedException();
         }
 
 
@@ -151,9 +150,9 @@ namespace DotnetIteration
         // 
         public static int FindTheNeedleIndex(List<string> sentences)
         {
-            var haystack = sentences.FindIndex(sentence => sentence.Contains("needle"));
-            return haystack;
-            throw new System.NotImplementedException();
+            return sentences.FindIndex(sentence => sentence.Contains("needle"));
+
+            //throw new System.NotImplementedException();
         }
 
 
