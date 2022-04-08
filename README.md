@@ -1,4 +1,4 @@
-# .NET Iteration
+# .NET Iteration LINQ practice 
 
 ## Objectives
 
